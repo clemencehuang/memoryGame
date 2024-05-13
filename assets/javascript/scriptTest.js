@@ -1,14 +1,14 @@
+// Based on youtube.com/codingnepal
+
 const cards = document.querySelectorAll(".card"); // accesses all card classes on the html page
 
-// ---------------- global variables ----------------
+// global variables
 
 let matched = 0;
 let cardOne, cardTwo; // define two cards that need to be selected
 let disableDeck = false;
 
-// ---------------- functions ----------------
-
-// click card > flip card >
+// functions
 
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
@@ -24,9 +24,6 @@ function flipCard({target: clickedCard}) {
     }
     // end of function
 }
-
-// ---------------- check if img1 and img2 match > ----------------
-// ---------------- if 8 sets of cards are matched shuffle cards and restart game ----------------
 
 function matchCards(img1, img2) {
     if(img1 === img2) { // if img1 matches img2
@@ -54,8 +51,6 @@ function matchCards(img1, img2) {
     }, 1200);
     // end of function
 }
-
-// ---------------- shuffle cards randomly > ----------------
 
 function shuffleCard() {
     matched = 0;

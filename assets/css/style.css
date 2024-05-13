@@ -52,8 +52,8 @@ h1 {
   position: relative;
   perspective: 1000px; /* cards move slightly into perspective when flipped (higher value = less intensive 3D effect vs lower value) */
   transform-style: preserve-3d; /* preserves the 3D shape of the cards without distorting them */
-  height: calc(100% / 4 - 10px);
-  width: calc(100% / 4 - 10px);
+  height: calc(100% / 4 - 10px); /* height ?? minus 10[x from margin */
+  width: calc(100% / 4 - 10px); /* width ?? minus 10[x from margin */
 }
 
 /* card animation and speed when cards are not matching */
@@ -110,6 +110,7 @@ The % defines their position at that given duration */
   transform: rotateY(-180deg);
 }
 
+/* b/w patterned cards rotate back into original position */
 .card.flip .back-view {
   transform: rotateY(0);
 }
