@@ -27,48 +27,43 @@ function fillBoard() {
         board.push(cards[randNumber]); // push random card onto the board
         cards.splice(randNumber, 1); // remove that random card from array so that it doesn't get chosen
     }
-}
 
-
-
-/* -------------- link board play area to html ------------- */
-
-    // ORIGINAL HTML WITH ITS CLASSES:
-    //
-    //   <ul class="cards">
-    //     <li class="card">
-    //       <div class="view front-view"> <!-- b/w patterned cards -->
-    //         <img src="assets/images/que_icon-1.png" alt="icon">
-    //       </div>
-    //       <div class="view back-view"> <!-- coloured cards -->
-    //         <img src="assets/images/img-1.png" alt="card-img">
-    //       </div>
-    //     </li>
-
-function displayBoard() {
-
-/*  I changed the name to playAreaBackView as these cards are showing the 
-    BACK VIEW = coloured patterns BUT also need to show the FRONT VIEW = b/w pattern */
-    
-    let playAreaBackView = "<ul class='cards'>";
-
-    playAreaBackView += "<li class='card'>";
-
-    for (j = 0; j <= 15; j++) {
-
-        // I changed it from onclick='checkAnswer() to ==> onclick='matchCards()
-        playAreaBackView += "<button onclick='matchCards()'><img class='view' src="
-        playAreaBackView += board[j]
-        playAreaBackView += "></button>"
-
+    {
+        let backOfCard = Array(16).fill("assets/images/bwImage.png");  //multiply the same image 16 times
+        board.push(cards[backOfCard]); // push all cards onto the board
     }
 
-    playAreaBackView += "</ul>";
-
-    document.getElementById('board').innerHTML = playAreaBackView;
 }
 
+// getElementById.style.zIndex = -1;
+// style.z-index = 1
 
+function displayBoard() {
+  // build the HTML to display the 16 images as a 4 x 4 table
+ 
+  let playArea = "<div id='container'> ";
+  playArea += "<table border=2>";
+ 
+  for (j = 0; j <= 15; j++) {
+    // for every 4th card
+    if (j % 4 == 0) {
+      playArea += "<tr>";
+    }
+    playArea += "<td><button onclick='matchCards()'><img class='view' src=";
+    playArea += board[j];
+    playArea += "></button></td>";
+ 
+    if ((j + 1) % 4 == 0) {
+      playArea += "</tr>";
+    }
+  }
+ 
+  // close the div tag
+  playArea += "</div>";
+ 
+  // allow it t displayed on the web page
+  document.getElementById("board").innerHTML = playArea;
+}
 
 /* -------------- flip cards ------------- */
 
@@ -82,17 +77,27 @@ let cardOne, cardTwo; // define two cards that need to be selected
 
     }
 
-cards.forEach(card => { // adding click even to all cards
-    card.addEventListener("click", flipCard); // when cards are clicked, function clickCard takes place
+cards.forEach(card => { // adding click event to all cards
+    card.addEventListener("click", flipCard); // when cards are clicked, function flipCard takes place
 });
 
 
 
 /* -------------- match cards ------------- */
 
-function matchCards() {
+let matched = 0
 
-}
+function matchCards(img1, img2) {
+    if (img1 === img2) { // if img1 matches img2
+        matched++;
+        if (matched === 8) {
+            setTimeout(() => {
+                return fillCardDeck();
+            }, 1000); // returns to the start of the game after 1 second
+            }
+        }
+    }
+   // if ( == cards.length)
 
 
 
@@ -112,7 +117,6 @@ console.log("after BOARD", board);
 displayBoard();
 console.log("after CARDS", cards);
 console.log("after BOARD", board);
-console.log(playAreaBackView);
 
-flipCard(e);
-console.log(cardOne, cardTwo);
+// flipCard(e);
+// console.log(cardOne, cardTwo);

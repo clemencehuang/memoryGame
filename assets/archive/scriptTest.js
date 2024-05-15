@@ -10,6 +10,31 @@ let disableDeck = false;
 
 // functions
 
+/* -------------- link board play area to html ------------- */
+
+// function displayBoard() {
+
+/*  I changed the name to playAreaBackView as these cards are showing the 
+//     BACK VIEW = coloured patterns BUT also need to show the FRONT VIEW = b/w pattern */
+    
+//     let playAreaBackView = "<ul class='cards'>";
+
+//     playAreaBackView += "<li class='card'>";
+
+//     for (j = 0; j <= 15; j++) {
+
+//         // I changed it from onclick='checkAnswer() to ==> onclick='matchCards()
+//         playAreaBackView += "<button onclick='matchCards()'><img class='view' src="
+//         playAreaBackView += board[j]
+//         playAreaBackView += "></button>"
+
+//     }
+
+//     playAreaBackView += "</ul>";
+
+//     document.getElementById('board').innerHTML = playAreaBackView;
+// }
+
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
         clickedCard.classList.add("flip");
