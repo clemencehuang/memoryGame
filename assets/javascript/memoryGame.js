@@ -1,18 +1,21 @@
-cards = ["img-2.png","img-3.png","img-1.png", "img-4.png"]
+cards = ["img-1.png","img-2.png","img-3.png", "img-4.png","img-5.png","img-6.png","img-7.png", "img-8.png",
+"img-1.png","img-2.png","img-3.png", "img-4.png","img-5.png","img-6.png","img-7.png", "img-8.png"]
  
+
 let tablePosition = 0;
- 
- 
- 
+let matched = 0
+
+
+
 function displayBoard(){
  
     let row ="";
  
     // <td><img id="0" src="assets/images/img-2.png" onclick="flipCard(this.id)"  /></td>
  
-    for (let x = 0 ; x < cards.length ; x++) {
+    for ( x = 0 ; x < cards.length ; x++) {
  
-    console.log(x)
+        console.log(x)
         console.log(cards[x]);
    
    
@@ -38,9 +41,7 @@ document.getElementById(tablePosition).style.visibility = 'hidden';
  
 }
  
- 
- 
- 
+
  
 /* ---- Start of Processing Here --------------------- */
  
