@@ -1,4 +1,4 @@
-cards = ["img-2.png","img-3.png","img-1.png", "img-4.png" ]
+cards = ["img-2.png","img-3.png","img-1.png", "img-4.png"]
  
 let tablePosition = 0;
  
@@ -16,7 +16,7 @@ function displayBoard(){
         console.log(cards[x]);
    
    
-    row += `<td><img id=${x}  src= assets/images/${cards[x]} onclick="flipCard(this.id)"  `
+    row += `<td><img id=${x}  src= assets/images/${cards[x]} onclick="flipCard(this.id)"`
     }
  
     let fullRow =  "<tr>" + row + "</tr>"
@@ -32,8 +32,8 @@ function displayBoard(){
  
 function flipCard(tablePosition) {
  
-   window.alert( tablePosition );
-document.getElementById(tablePosition).style.display = "none";
+   window.alert(tablePosition);
+document.getElementById(tablePosition).style.visibility = 'hidden';
  
  
 }
@@ -47,4 +47,3 @@ document.getElementById(tablePosition).style.display = "none";
 displayBoard();
  
 /* ---- End of Processing Here --------------------- */
-has context menu
