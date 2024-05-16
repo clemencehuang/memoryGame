@@ -1,0 +1,187 @@
+/* Import Google Font - Platypi */
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* default body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Platypi', serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #fff461;
+}
+
+/* mint coloured background box */
+#container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 55px;
+  padding: 80px 80px;
+  border-radius: 10px;
+  background: hsl(171, 96%, 90%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+}
+
+/* card default styles */
+.cards, .card, .view {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+/* "unorder list" card container */
+.cards {
+  /* height: 400px;
+  width: 400px; */
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
+}
+
+.cards .card {
+  /* cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  perspective: 1000px; /* cards move slightly into perspective when flipped (higher value = less intensive 3D effect vs lower value) */
+/*  transform-style: preserve-3d; /* preserves the 3D shape of the cards without distorting them */
+/*  height: calc(100% / 4 - 10px); /* height ?? minus 10[x from margin */
+/* width: calc(100% / 4 - 10px); /* width ?? minus 10[x from margin */
+} 
+
+/* card animation and speed when cards are not matching */
+.card.shake {
+  /* animation: shake 0.25s ease-in-out; */
+}
+
+/* cards shake sideways along their x-axis. 
+The % defines their position at that given duration */
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+
+/* card view static position */
+/.card .view { 
+  /* width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background: #fff;
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.25s linear;
+} */
+
+/* b/w patterned cards */
+.card .front-view img {
+  /* max-width: 80px; */
+}
+
+/* coloured cards that are revealed on mouse click */
+.card .back-view img {
+  /* max-width: 90px;
+  border-radius: 7px; */
+}
+
+/* coloured cards rotate anti-clockwise by 180 degrees*/
+.card .back-view {
+  /* transform: rotateY(-180deg); */
+}
+
+/* b/w patterned cards rotate back into original position */
+.card.flip .back-view {
+  /* transform: rotateY(0); */
+}
+
+/* coloured cards rotate clock-clockwise by 180 degrees back into their original position */
+.card.flip .front-view {
+  /* transform: rotateY(180deg); */
+}
+
+/* Restart button */
+.button {
+  display: flex;
+  margin-top: 8%;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 3px 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fff;
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+  .cards{
+    height: 350px;
+    width: 350px;
+  }
+  .card .front-view img{
+    width: 68px;
+  }
+  .card .back-view img{
+    max-width: 80px;
+    border-radius: 7px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cards{
+    height: 300px;
+    width: 300px;
+  }
+  .card .front-view img{
+    width: 55px;
+  }
+  .card .back-view img{
+    max-width: 65px;
+  }
+}
