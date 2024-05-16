@@ -1,6 +1,6 @@
 // Memory Game
 
-cards= []
+cards = []
 board = []
 
 /* -------------- fill card deck with 2x 8 images ------------- */
@@ -49,9 +49,11 @@ function displayBoard() {
     if (j % 4 == 0) {
       playArea += "<tr>";
     }
-    playArea += "<td><button onclick='matchCards()'><img class='view' src=";
-    playArea += board[j];
-    playArea += "></button></td>";
+    playArea += `<td><button id=${j} onclick='matchCards(${j}'><img class='view' src=${board[j]}>
+    </button></td>`;
+    // playArea += "<td><button onclick='matchCards()'><img class='view' src=";
+    // playArea += board[j];
+    // playArea += "></button></td>";
  
     if ((j + 1) % 4 == 0) {
       playArea += "</tr>";
@@ -61,25 +63,36 @@ function displayBoard() {
   // close the div tag
   playArea += "</div>";
  
-  // allow it t displayed on the web page
+  // allow it to be displayed on the web page
   document.getElementById("board").innerHTML = playArea;
 }
 
 /* -------------- flip cards ------------- */
 
-let cardOne, cardTwo; // define two cards that need to be selected
+const card = document.getElementById("card");
 
-    function flipCard(e) { // e = event
-        let clickedCard = e.target; // target = click event that happened on the clickedCard
-        clickedCard.classList.add("flip");
-        cardOne = clickedCard;
-        cardTwo = clickedCard;
+    card.addEventListener("click", flipCard);
 
-    }
+    function flipCard() {
+        // toggle to switch between card and flipCard (executed in CSS) class
+        card.classList.toggle("flipCard"); 
+}
 
-cards.forEach(card => { // adding click event to all cards
-    card.addEventListener("click", flipCard); // when cards are clicked, function flipCard takes place
-});
+btn.addEventListener("click", flipCard);
+
+// let cardOne; 
+// let cardTwo; // define two cards that need to be selected
+
+//     function flipCard(e) { // e = event
+//         let clickedCard = e.target; // target = click event that happened on the clickedCard
+//         clickedCard.classList.add("flip");
+//         cardOne = clickedCard;
+//         cardTwo = clickedCard;
+//     };
+
+// cards.forEach(card => { // adding click event to all cards
+//     card.addEventListener("click", flipCard); // when cards are clicked, function flipCard takes place
+// });
 
 
 
@@ -103,20 +116,20 @@ function matchCards(img1, img2) {
 
 /* -------------- main processing ------------- */
 
-console.log("before CARDS", cards);
-console.log("before BOARD", board);
 fillCardDeck();
+console.log("fillCardDeck() before CARDS", cards);
+console.log("fillCardDeck() before BOARD", board);
 
-console.log("middle CARDS", cards);
-console.log("middle BOARD", board);
+console.log("fillCardDeck() middle CARDS", cards);
+console.log("fillCardDeck() middle BOARD", board);
 
 fillBoard();
-console.log("after CARDS", cards);
-console.log("after BOARD", board);
+console.log("fillBoard() after CARDS", cards);
+console.log("fillBoard() after BOARD", board);
 
 displayBoard();
-console.log("after CARDS", cards);
-console.log("after BOARD", board);
+console.log("displayBoard() after CARDS", cards);
+console.log("displayBoard() after BOARD", board);
 
-// flipCard(e);
-// console.log(cardOne, cardTwo);
+flipCard(e);
+console.log(cardOne, cardTwo);

@@ -48,6 +48,10 @@ img {
   width: 100px;
 }
 
+.flipCard {
+  transform: rotateY(180deg);
+}
+
 /* card default styles */
 .cards, .card, .view {
   /* display: flex;
