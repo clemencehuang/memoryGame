@@ -4,7 +4,7 @@
 XXXX
 
 ### Website Link
-[Griefwell London](https://clemencehuang.github.io/Project_1/)
+[Memory Game](https://clemencehuang.github.io/memoryGame/)
 
 &nbsp;
 
@@ -16,9 +16,8 @@ XXXX
 
 ## Technology
 
--   **HTML** was used to define the structure and content for the website (Home/About/Services/Contact pages) and highlight semantic elements.
--   **CSS** was used to style the HTML elements.
--   **Canva** was used to create the home page hero image with the bright yellow logo overlay.
+-   **HTML** was used to define the structure and and define the JavaScript script area.  
+-   **CSS** was used to style the HTML elements.-   **Canva** was used to create the home page hero image with the bright yellow logo overlay.
 -   **Git** was used as a version control software, utilizing the command line terminal to commit to Git and Push to GitHub.
 -   **GitHub** is used as the hosting site to store the code for the website after being pushed from Git.
 -   **Google Fonts** was used to import the "Cormorant + Garamond" font family.
@@ -30,7 +29,7 @@ XXXX
 
 ## References
   
--  Online course material from the Code Institute to learn HTML and CSS alongside W3Schools, Stack Overflow, CodePen and YouTube.
+-  Online course material from the Code Institute to learn JavaScrip alongside W3Schools, Stack Overflow, CodePen and YouTube.
 -  I used the Mimo app as an additional learning path which helped with step-by-step practice and also offered snippets of new code that I hadn't picked up through the Code Institute modules.
 -  [Burger Menu:](https://codepen.io/alvarotrigo/pen/PoJGObg) was referenced to build the burger menu.
 
