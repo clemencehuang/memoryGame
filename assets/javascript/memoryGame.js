@@ -42,7 +42,8 @@ function fillBoard() {
 
 }
 
-
+// HOW DO I GET TO SHOW THE 'HIDDEN' SIDE FIRST AND THEN REVEAL THE CARDS ON CLICK? 
+// AT THE MOMENT IT'S THE OTHER WAY ROUND
 
 function displayBoard(){
  
