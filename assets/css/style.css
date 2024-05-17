@@ -5,6 +5,7 @@
 }
 
 #board {
+    display: flex;
     justify-content: center;
     height: 500px;
     width: 500px;

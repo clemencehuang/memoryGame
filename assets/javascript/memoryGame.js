@@ -47,20 +47,18 @@ function fillBoard() {
 
 function displayBoard(){
  
-    let row ="";
+    let row = "";
+    let fullRow = "";
  
     // <td><img id="0" src="assets/images/img-2.png" onclick="flipCard(this.id)"  /></td>
  
-    for ( x = 0 ; x < cards.length ; x++) {
- 
-        console.log(x)
-        console.log(cards[x]);
+    for ( x = 0 ; x < board.length ; x++) {
+    
    
-   
-        row += `<td><img id=${x}  src= assets/images/${cards[x]} onclick="flipCard(this.id)"`
+        row += `<td><img id=${x}  src= ${board[x]} onclick="flipCard(this.id)"`
     }
  
-    let fullRow =  "<tr>" + row + "</tr>"
+    fullRow +=  "<tr>" + row + "</tr>"
  
     let fullTable = "<table border=2>" + fullRow + "</table>"
  
@@ -115,6 +113,9 @@ console.log("fillBoard() after BOARD", board);
 displayBoard();
 console.log("displayBoard() after CARDS", cards);
 console.log("displayBoard() after BOARD", board);
+
+flipCard(tablePosition);
+console.log(tablePosition);
 
 matchCards();
 console.log("matchCards() matched cards");
