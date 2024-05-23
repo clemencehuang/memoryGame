@@ -134,7 +134,7 @@ The site was deployed on GitHub pages as follows:
 1. From the project's [repository](https://github.com/clemencehuang/memoryGame.git), select the **Settings** tab.
 2. From the left-hand menu, select the **Pages** tab.
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
-4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link: [Griefwell London](https://clemencehuang.github.io/memoryGame)
+4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link: [Memory Game](https://clemencehuang.github.io/memoryGame)
 
 &nbsp;
 ***
