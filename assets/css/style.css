@@ -14,40 +14,54 @@
 }
 
 body {
-  /* font-size: xx-large; */
-  /* color: purple; */
+  font-size: x-large;
   background: #fff461;
   position: relative;
-
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
 }
 
+h2 {
+  padding-bottom: 50px;
+}
+
 #board {
     display: flex;
     justify-content: center;
-    height: 700px;
+    height: 650px;
     width: 600px;
-    border-radius: 20px;
+    border-radius: 50px 0px;
     align-items: center;
-    background-color: aliceblue;
+    background-color: #cafdf0;
 }
 
 table {
-  border: 10px solid rgb(0, 0, 0);
-}
+  /* border: 2px solid rgb(0, 0, 0); */
+  border-collapse: separate;
+} */
 
 td {
-  border: 5px solid rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  background-color: rgb(52, 52, 52);
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 img {
   height: 100px;
   width: 100px;
+  border: solid 2px;
+  border-radius: 5px;
+  border-style: dotted;
+  margin-right: 6px;
 }
 
 .cardBack {
@@ -58,39 +72,15 @@ img {
   display: none;
 }
 
-
-
-
-
-
-/* * {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(253, 239, 171);
-} 
-
-#board {
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    width: 500px;
-    align-items: center;
-    background-color: aliceblue;
+button {
+  display: inline-block;
+  padding: 7px 15px 7px;
+  margin-top: 20px;
+  font-size: medium;
+  letter-spacing: 0.2px;
+  background: #fdfdf7;
+  border-radius: 10px;
+  border-style: dotted;
+  cursor: grab;
+  border-radius: 0px 10px;
 }
-
-tr {
-    display: block;
-    justify-content: center;
-    background-color: #fff;
-    border-collapse: collapse;
-
-}
-
-td {
-    border: 1px solid rebeccapurple;
-}
-
-img {
-    height: 100px;
-    width: 100px;
-} */
