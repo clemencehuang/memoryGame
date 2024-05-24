@@ -59,6 +59,8 @@ Colours are bright, bold and fun, but have a warmth that remains sophisticated t
 ### Play area
 At the start of the game, the cards are already distributed in a 4x4 formation with the black and white back of the cards facing the user. Each card will turn over when clicked and reveal the front of the card with a colourful graphic pattern. A maximum of two cards can be clicked at any one time, if they match, the cards with the matching shape will stay open and the user can click on another set of cards. If they don’t match, they will turn over again, showing the back of the cards again. The game finishes as soon as all eight sets have been correctly matched and the game resets.
 
+![Logo](assets/readme/mockup/memoryGame_play.png)
+
 ### Navigation
 
 Navigation is intuitive without the need for lengthy instructions as it’s a well known game that are played by kids around the world. It simply features the name of the game at the top of the play area and a reset button which can be clicked should the user wishes to reset the game before it finishes. 
