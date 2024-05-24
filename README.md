@@ -63,7 +63,7 @@ At the start of the game, the cards are already distributed in a 4x4 formation w
 
 ### Navigation
 
-Navigation is intuitive without the need for lengthy instructions as it’s a well known game that are played by kids around the world. It simply features the name of the game at the top of the play area and a reset button which can be clicked should the user wishes to reset the game before it finishes. 
+Navigation is intuitive without the need for lengthy instructions as it’s a well known game that are played by kids around the world. It simply features the name of the game at the top of the play area and a RESTART button which can be clicked should the user wishes to reset the game before it finishes. 
 
 &nbsp;
 ***
