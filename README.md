@@ -48,10 +48,10 @@ All design elements were carefully considered to give a vintage feel to the game
 
 The graphic patterns were chosen for their warm and colourful design, reminiscent of the 70s. I took particular inspiration from my own set of Memory Game cards that I still own today. They feel part of the same family of cards, yet have distinguishable shapes and colours that allow the user to memorise them quickly.  
 
-![Logo](assets/readme/logo/memoryGame_logo.png)
-
 ### Font
 "Platypi" was chosen as a font due to its playful vintage features, the bold serifs give it a fun character. 
+
+![Logo](assets/readme/logo/memoryGame_logo.png)
 
 ### Color Scheme
 Colours are bright, bold and fun, but have a warmth that remains sophisticated to appeal to any age group. 
