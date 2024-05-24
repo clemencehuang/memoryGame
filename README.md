@@ -9,7 +9,7 @@ Japanese versions known as Awase or Kai-awase date from the 16th century and fea
 
 In the USA and England the game was known as Pairs, Pelmanism, or Concentration whilst in Switzerland it was a domino-like game named Zwillingsspiel.
 
-I liked the idea of taking this old-fashioned, globally popular game and making it available online. The mobile version allows you to play when out and about. 
+I liked the idea of taking this old-fashioned, globally popular game and making it available online.
 
 ### Website Link
 [Memory Game](https://clemencehuang.github.io/memoryGame/)
