@@ -1,123 +1,158 @@
-// I tested putting 2x 8 images into the array, the images show up but all in one line.
-// 
-// cards = ["img-1.png", "img-2.png", "img-3.png", "img-4.png", "img-5.png", "img-6.png", "img-7.png", "img-8.png",
-// "img-1.png","img-2.png","img-3.png", "img-4.png","img-5.png","img-6.png","img-7.png", "img-8.png"]
- 
-cards = []
-board = []
+// Memory Card Game
 
-let tablePosition = 0;
-let matched = 0
+cards = []; // array to hold up to 8 image files representing 8 memory cards
+board = []; // array to hold 2 X 8 images, randomly organized
 
+cardsFlippedArray = []; // array to hold the 2 cards that have been flipped, for comparing.
 
-/* -------------- fill card deck with 2x 8 images ------------- */
+let cardsFlipped = 0; // number of cards flipped, min = 0, max 2;
+let match = false;
 
-function fillCardDeck() {
+/* --- Start of Functions' Definitions --- */
 
-    for (let j = 1; j <= 2 ; j++){ // iterate through below loop 2x (i.e. 2x 8 images)
-       for (let i = 1; i <= 8 ; i++){
-            let imageName = "assets/images/img-".concat(i, ".png");
-            cards.push(imageName);
-        }
-    }
+function startNewGame() {
+  /* start a new game */
+
+  // clear the board
+  document.getElementById("board").innerHTML = "";
+
+  fillCardsArray();
+  fillBoard();
+  buildBoard();
+  // matchCards();
 }
 
+function fillCardsArray() {
+  /* fill the cards array with 16 images */
 
-
-/* -------------- fill board play area randomly with those 16 cards ------------- */
+  /* push 2 X 8 images, in the format "img-n.png" */
+  for (let n = 1; n <= 8; n++) {
+    cards.push(`img-${n}.png`);
+    cards.push(`img-${n}.png`);
+  }
+}
 
 function fillBoard() {
-    for (i = 1 ; i <=16 ; i++) {
+  /* fill board array with those 16 cards, in random order  */
 
-        let randNumber = Math.floor(Math.random() * cards.length );
+  for (let i = 1; i <= 16; i++) {
+    let randomCard = Math.floor(Math.random() * cards.length); // pick a random card
+    board.push(cards[randomCard]); // push the card into the board array
+    cards.splice(randomCard, 1); // remove the card so that it doesn't get picked again
+  }
+}
 
-        board.push(cards[randNumber]); // push random card onto the board
-        cards.splice(randNumber, 1); // remove that random card from array so that it doesn't get chosen
+function buildBoard() {
+  /* Build a board of 4 rows by 4 columns */
+
+  const imageFilePath = "assets/images/";
+  let row = "";
+
+  /* Each of the 16 cells will contain 2 images : the card's front image and the card's back image */
+  // <td><img id="0" src="assets/images/img-2.png" onclick="flipCard(this.id)"  /></td>
+
+  for (let x = 0; x < board.length; x++) {
+    /* start a new row */
+    if (x % 4 == 0) {
+      row += "<tr>";
     }
 
-    // {
-    //     let backOfCard = Array(16).fill("assets/images/bwImage.png");  //multiply the same image 16 times
-    //     board.push(cards[backOfCard]); // push all cards onto the board
-    // }
+    /* build the <td> */
+    row += "<td>";
+    row += `<img class=cardBack id=cardback-${x} src=${imageFilePath}bwImage.png onclick="flipCard(this.id)" />`;
+    row += `<img class=cardFront id=cardfront-${x}  src= ${imageFilePath}${board[x]} />`;
+    row += "</td>";
 
-}
-
-// HOW DO I GET TO SHOW THE 'HIDDEN' SIDE FIRST AND THEN REVEAL THE CARDS ON CLICK? 
-// AT THE MOMENT IT'S THE OTHER WAY ROUND
-
-function displayBoard(){
- 
-    let row = "";
-    let fullRow = "";
- 
-    // <td><img id="0" src="assets/images/img-2.png" onclick="flipCard(this.id)"  /></td>
- 
-    for ( x = 0 ; x < board.length ; x++) {
-    
-   
-        row += `<td><img id=${x}  src= ${board[x]} onclick="flipCard(this.id)"`
+    /* close the new row */
+    if ((x + 1) % 4 == 0) {
+      row += "</tr>";
     }
- 
-    fullRow +=  "<tr>" + row + "</tr>"
- 
-    let fullTable = "<table border=2>" + fullRow + "</table>"
- 
-    console.log(fullTable);
- 
-    document.getElementById("board").innerHTML = fullTable;
- 
-}
- 
- 
-function flipCard(tablePosition) {
- 
-    window.alert(tablePosition);
-document.getElementById(tablePosition).style.visibility = 'hidden';
- 
- 
-}
- 
+  }
 
+  /* final, display the table on the web page */
+  document.getElementById("board").innerHTML = "<table>" + row + "</table>";
+}
+
+function flipCard(cardBackId) {
+  /* Flip over the card which was clicked */
+
+  cardsFlipped++;
+
+  /* The cardBack's CSS is set to display */
+  /* The cardFront's CSS is set to non-display */
+
+  // Split the cardBackId to get just the 'number' portion , i.e. 0 to 15,
+  // .split method creates an array of 2 elements, the 2nd element (i.e. index 1) is the image number
+  let boardIndex = cardBackId.split("-")[1];
+  boardIndex = boardIndex.split(".")[0]; // remove the ".png" portion
+  console.log("boardIndex: ", boardIndex);
+
+  // build the front card's Id as "cardFront-nn"
+  //  let cardFrontId = "cardFront-".concat(cardBackId.split("-")[1]);
+  let cardFrontId = "cardfront-" + boardIndex;
+
+  /* To flip the card, set the cardBack to non-display */
+  document.getElementById(cardBackId).style.display = "none";
+
+  /* and set the cardFront to display */
+  document.getElementById(cardFrontId).style.display = "inline";
+
+  /* store the card flipped for later */
+  cardsFlippedArray.push([
+    boardIndex,
+    board[boardIndex],
+    cardBackId,
+    cardFrontId,
+  ]);
+
+  console.log(cardsFlippedArray);
+  console.log("cardsFlipped", cardsFlipped);
+  if (cardsFlippedArray.length == 2) {
+    checkCardsMatch();
+  }
+}
 
 /* -------------- match cards ------------- */
 
+function checkCardsMatch() {
+  console.log("checking match");
 
-function matchCards() {
-    if (x === x) { // if x matches x
-        matched++;
-        if (matched === 8) {
-            setTimeout(() => {
-                return fillCardDeck();
-            }, 1000); // returns to the start of the game after 1 second
-            }
-        }
+  card1 = cardsFlippedArray[0][1];
+  card1_frontId = cardsFlippedArray[0][2];
+  card1_backId = cardsFlippedArray[0][3];
+
+  card2 = cardsFlippedArray[1][1];
+  card2_frontId = cardsFlippedArray[1][2];
+  card2_backId = cardsFlippedArray[1][3];
+
+  console.log(card1, card2);
+
+    if (card1 == card2) {
+        match = true;
+    } else {
+        match = false;
+        setTimeout(() => {
+            return flipCardsBack();
+        }, 1000);
     }
-   // if ( == cards.length)
+    
+  cardsflipped = 0;
+  cardsFlippedArray = [];
+}
 
 
+function flipCardsBack() {
+  cardsflipped = 0;
+  /* flip the cards back */
+  document.getElementById(card1_frontId).style.display = "inline";
+  document.getElementById(card1_backId).style.display = "none";
+  /* card 2 */
+  document.getElementById(card2_frontId).style.display = "inline";
+  document.getElementById(card2_backId).style.display = "none";
+}
 
- 
 /* ---- Start of Processing Here --------------------- */
- 
-fillCardDeck();
-console.log("fillCardDeck() before CARDS", cards);
-console.log("fillCardDeck() before BOARD", board);
 
-console.log("fillCardDeck() middle CARDS", cards);
-console.log("fillCardDeck() middle BOARD", board);
+startNewGame();
 
-fillBoard();
-console.log("fillBoard() after CARDS", cards);
-console.log("fillBoard() after BOARD", board);
-
-displayBoard();
-console.log("displayBoard() after CARDS", cards);
-console.log("displayBoard() after BOARD", board);
-
-flipCard(tablePosition);
-console.log(tablePosition);
-
-matchCards();
-console.log("matchCards() matched cards");
- 
 /* ---- End of Processing Here --------------------- */

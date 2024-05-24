@@ -1,8 +1,73 @@
+/* * {
+  //  display: flex;
+  // justify-content: center;
+} */
+
+/* Import Google Font - Platypi */
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Platypi', serif;
+}
+
+body {
+  /* font-size: xx-large; */
+  /* color: purple; */
+  background: #fff461;
+  position: relative;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    width: 600px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+table {
+  border: 10px solid rgb(0, 0, 0);
+}
+
+td {
+  border: 5px solid rgb(255, 255, 255);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.cardBack {
+  display: inline;
+}
+
+.cardFront {
+  display: none;
+}
+
+
+
+
+
+
+/* * {
     display: flex;
     justify-content: center;
     background-color: rgb(253, 239, 171);
-}
+} 
 
 #board {
     display: flex;
@@ -28,4 +93,4 @@ td {
 img {
     height: 100px;
     width: 100px;
-}
+} */
