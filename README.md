@@ -12,7 +12,7 @@ I liked the idea of taking this old-fashioned, physical game and making it avail
 
 &nbsp;
 
-![memoryGame_amiresponsive](validation/amiresponsive/memoryGame_amiresponsive.png)
+![memoryGame_amiresponsive](assets/readme/logo/lmemoryGame_logo.png)
 
 &nbsp;
 ***
@@ -21,15 +21,11 @@ I liked the idea of taking this old-fashioned, physical game and making it avail
 ## Technology
 
 -   **HTML** was used to define the structure and and define the JavaScript script area.  
--   **CSS** was used to style the HTML elements.-   **Canva** was used to create the home page hero image with the bright yellow logo overlay.
+-   **CSS** was used to style the HTML elements.
 -   **Git** was used as a version control software, utilizing the command line terminal to commit to Git and Push to GitHub.
 -   **GitHub** is used as the hosting site to store the code for the website after being pushed from Git.
--   **Google Fonts** was used to import the "Cormorant + Garamond" font family.
--   **WEBP Converter** was used to convert images to webp format.
--   **W3C HTML Validator** was used to check for errors in the HTML code.
--   **W3C CSS Validator** was used to check for errors in the CSS code.
+-   **Google Fonts** was used to import the "Platypi" font family.
 -   **Google Chrome Developer Tools** was used during testing, debugging and making the website responsive.
--   **Google Chrome Lighthouse** was used during the final testing stage of the website.
 
 ## References
   
