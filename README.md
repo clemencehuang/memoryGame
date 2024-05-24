@@ -73,10 +73,9 @@ Navigation is intuitive without the need for lengthy instructions as it’s a we
 
 
 * Add a countdown timer with a set time in which the game has to be completed. To make it more challenging it would be fun if the user could choose from a range of time limits, e.g. 2 minutes, 1.5 minutes, 1 minute, 30 seconds. 
-* A stopwatch that counts exactly how long it takes the user to compete the game. 
-* Allow multiple players to compete against each other whereby they enter have a username and a scorecard. 
+* A stopwatch that counts exactly how long it takes the user to complete the game. 
+* Allow multiple players to compete against each other whereby they have a username and a scorecard. 
 * Allow users to extend the play area to more cards, e.g. 24, 32, 64. 
-* Make it fully adaptable to the device dimensions no matter how many cards the play area contains. 
 
 &nbsp;
 ***
