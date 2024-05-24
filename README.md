@@ -1,7 +1,7 @@
 # Memory Game
 ## Game Overview
 
-As my first JavaScript project I wanted to re-create the popular Memory Game we all know and love from childhood. It was a personal favourite of mine during my own childhood growing up in Germany. It’s a classic game that all people young and old have been been enjoying in its various iterations since the 16th century up until today. It possibly ows its longevity to its simple rules and instant engagement. 
+For my first **JavaScript** project I wanted to re-create the popular Memory Game we all know and love from childhood. It was a personal favourite of mine during my own childhood growing up in Germany. It’s a classic game that all people young and old have been been enjoying in its various iterations since the 16th century up until today. It possibly ows its longevity to its simple rules and instant engagement. 
 
 The Memory Game was first published in today's form by Ravensburger, Germany in February 1959 who also hold the rights to the brand name "Memory".
 
