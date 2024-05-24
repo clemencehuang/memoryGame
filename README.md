@@ -24,7 +24,8 @@ I liked the idea of taking this old-fashioned, globally popular game and making 
 
 ## Technology
 
--   **HTML** was used to define the structure and and define the JavaScript script area.  
+-   **HTML** was used to define the structure and and define the JavaScript script area.
+-   **JavaScript** was used to add functionality to the game.  
 -   **CSS** was used to style the HTML elements.
 -   **Git** was used as a version control software, utilizing the command line terminal to commit to Git and Push to GitHub.
 -   **GitHub** is used as the hosting site to store the code for the website after being pushed from Git.
