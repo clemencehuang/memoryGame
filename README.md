@@ -1,15 +1,15 @@
 Memory Game
 ## Game Overview
 
-As my first JavaScript project I wanted to re-create the popular memory game we all know and love from childhood. It was a personal favourite of mine during my own childhood growing up in Germany. It’s a classic game that all people young and old have been been enjoying in various iteration since the 16th century up until today. There are no difficult rules to follow and yet it’s instantly engaging. 
+As my first JavaScript project I wanted to re-create the popular Memory Game we all know and love from childhood. It was a personal favourite of mine during my own childhood growing up in Germany. It’s a classic game that all people young and old have been been enjoying in its various iterations since the 16th century up until today. It possibly ows its longevity to its simple rules and instant engagement. 
 
-The Memory Game was first published in today's form by Ravensburger, Germany in February 1959 and they hold the rights to the brand name "Memory".
+The Memory Game was first published in today's form by Ravensburger, Germany in February 1959 who also hold the rights to the brand name "Memory".
 
-There are versions known from Japan in the 16th century - matching pictures painted on shells. Known asAwase or Kai-awase.
+Japanese versions known as Awase or Kai-awase date from the 16th century and feature matching pictures painted on shells.
 
 In USA and England known as Pairs, Pelmanism, or Concentration whilst in Switzerland it was a domino-like game named Zwillingsspiel.
 
-I liked the idea of taking this old-fashioned, physical game and making it available online. The mobile version allows you to play when out and about. 
+I liked the idea of taking this old-fashioned, globally popular game and making it available online. The mobile version allows you to play when out and about. 
 
 ### Website Link
 [Memory Game](https://clemencehuang.github.io/memoryGame/)
@@ -43,14 +43,14 @@ I liked the idea of taking this old-fashioned, physical game and making it avail
 ## Design and Content Structure
 
 ### Design
-All design elements were carefully considered to give a vintage feel to the game. The play area and arrangement of cards were intentionally kept simple and graphic to mimic a real life memory card game that we remember from our childhood. Even though hosted online, the design deliberately stays away from a typical digital gaming look. 
+All design elements were carefully considered to give a vintage feel to the game. The play area and arrangement of cards were intentionally kept simple and graphic to mimic a real life Memory Card game. Even though hosted online, the design deliberately stays away from a typical digital gaming look. 
 
-The graphic patterns were chosen for their warm and colourful design, reminiscent of the 70s. They feel part of the same family of cards, yet have distinguishable shapes and colours that allow the user to memorise them quickly.  
+The graphic patterns were chosen for their warm and colourful design, reminiscent of the 70s. I took particular inspiration from my own set of Memory Game cards that I still own today. They feel part of the same family of cards, yet have distinguishable shapes and colours that allow the user to memorise them quickly.  
 
 ![Logo](assets/readme/logo/memoryGame_logo.png)
 
 ### Font
-"Xxx" was chosen as a font due to its playful vintage features, the bold serifs give it a fun character. 
+"Platypi" was chosen as a font due to its playful vintage features, the bold serifs give it a fun character. 
 
 ### Color Scheme
 Colours are bright, bold and fun, but have a warmth that remains sophisticated to appeal to any age group. 
@@ -81,48 +81,8 @@ Navigation is intuitive without the need for lengthy instructions as it’s a we
 
 ## Testing
 
-The W3C Markup Validation Service and W3C CSS Validation Service were used to validate every page of the project to ensure there were no syntax errors in the project.
-    
-**HTML**:
-
-xxx
-
-    
-**CSS**:
-
-Initial tests show one error and one warning to be corrected.
-
-![Final test results](/validation/w3c_validator/errors_solved/project_1_css_solved.png)
-
-
-**JAVASCRIPT**:
-
-xxx
-
-
-### Further Testing
-
 -   The Website was tested on Google Chrome, using DevTools across various breakpoints for mobile, tablet, laptop and desktop.
 -   All links were tested across all pages and device breakpoints.
-
-&nbsp;
-***
-&nbsp;
-
-## Performance
-
-Google Chrome Lighthouse was used to calculate performance scores. All pages achieved green light across all elements: performance, accessibility, best practices and SEO.
-
-![Lighthouse test results](/validation/lighthouse/project_1_index_lighthouse.png)
-
-    
-### Accessibility
-Making the website accessible was paramount in order to adhere to web standards but also, to be able to reach as wide an audience as possible and to make the user experience across various devices as user friendly as possible.
-
-* Semantic elements are used throughout the website.
-* All images were converted into WEBP, a reduced file size to support the load time of images (https://image.online-convert.com/).
-* All images contained an alt tag whenever possible.
-* The site is responsive to different screen sizes.
 
 &nbsp;
 ***
