@@ -7,7 +7,7 @@ The Memory Game was first published in today's form by Ravensburger, Germany in 
 
 Japanese versions known as Awase or Kai-awase date from the 16th century and feature matching pictures painted on shells.
 
-In USA and England known as Pairs, Pelmanism, or Concentration whilst in Switzerland it was a domino-like game named Zwillingsspiel.
+In the USA and England known as Pairs, Pelmanism, or Concentration whilst in Switzerland it was a domino-like game named Zwillingsspiel.
 
 I liked the idea of taking this old-fashioned, globally popular game and making it available online. The mobile version allows you to play when out and about. 
 
