@@ -12,7 +12,7 @@ I liked the idea of taking this old-fashioned, physical game and making it avail
 
 &nbsp;
 
-![memoryGame_amiresponsive](assets/readme/logo/lmemoryGame_logo.png)
+![memoryGame_amiresponsive](assets/readme/mockup/memoryGame_amiresponsive.png)
 
 &nbsp;
 ***
@@ -43,7 +43,7 @@ All design elements were carefully considered to give a vintage feel to the game
 
 The graphic patterns were chosen for their warm and colourful design, reminiscent of the 70s. They feel part of the same family of cards, yet have distinguishable shapes and colours that allow the user to memorise them quickly.  
 
-![Logo](assets/readme/memoryGame_logo.png)
+![Logo](assets/readme/logo/memoryGame_logo.png)
 
 ### Font
 "Xxx" was chosen as a font due to its playful vintage features, the bold serifs give it a fun character. 
