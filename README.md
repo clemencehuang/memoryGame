@@ -1,9 +1,13 @@
 Memory Game
 ## Game Overview
 
-As my first JavaScript project I wanted to re-create the popular memory game we all know and love from childhood. It’s a classic game that all people young and old have been been enjoying since xxx up until today. There are no difficult rules to follow and yet it’s instantly engaging. 
+As my first JavaScript project I wanted to re-create the popular memory game we all know and love from childhood. It was a personal favourite of mine during my own childhood growing up in Germany. It’s a classic game that all people young and old have been been enjoying in various iteration since the 16th century up until today. There are no difficult rules to follow and yet it’s instantly engaging. 
 
-Add something about history of game and fun insights 
+The Memory Game was first published in today's form by Ravensburger, Germany in February 1959 and they hold the rights to the brand name "Memory".
+
+There are versions known from Japan in the 16th century - matching pictures painted on shells. Known asAwase or Kai-awase.
+
+In USA and England known as Pairs, Pelmanism, or Concentration whilst in Switzerland it was a domino-like game named Zwillingsspiel.
 
 I liked the idea of taking this old-fashioned, physical game and making it available online. The mobile version allows you to play when out and about. 
 
