@@ -17,7 +17,7 @@ function startNewGame() {
   // clear the board
   document.getElementById("board").innerHTML = "";
 
-  clearBoard()
+  clearBoardArray()
   fillCardsArray();
   fillBoard();
   buildBoard();
@@ -27,7 +27,7 @@ function startNewGame() {
 
 }
 
-function clearBoard() {
+function clearBoardArray() {
   board = []
 }
 
