@@ -3,7 +3,6 @@
 cards = []; // array to hold up to 8 image files representing 8 memory cards
 board = []; // array to hold 2 X 8 images, randomly organized
 
-
 cardsFlippedArray = []; // array to hold the 2 cards that have been flipped, for comparing.
 
 let cardsFlipped = 0; // number of cards flipped, min = 0, max 2;
@@ -22,9 +21,6 @@ function startNewGame() {
   fillBoard();
   buildBoard();
   // matchCards();
-
-
-
 }
 
 function clearBoardArray() {
@@ -49,7 +45,6 @@ function fillBoard() {
     board.push(cards[randomCard]); // push the card into the board array
     cards.splice(randomCard, 1); // remove the card so that it doesn't get picked again
   }
-
 }
 
 function buildBoard() {
@@ -78,7 +73,6 @@ function buildBoard() {
       row += "</tr>";
     }
   }
-
 
   /* final, display the table on the web page */
   document.getElementById("board").innerHTML = "<table>" + row + "</table>";
