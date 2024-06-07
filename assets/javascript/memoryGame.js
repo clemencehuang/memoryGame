@@ -50,8 +50,6 @@ function fillBoard() {
     cards.splice(randomCard, 1); // remove the card so that it doesn't get picked again
   }
 
-  console.log("Cards", cards)
-  console.log("Board", board)
 }
 
 function buildBoard() {
