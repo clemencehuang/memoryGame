@@ -16,10 +16,15 @@ function startNewGame() {
   // clear the board
   document.getElementById("board").innerHTML = "";
 
+  clearBoardArray()
   fillCardsArray();
   fillBoard();
   buildBoard();
   // matchCards();
+}
+
+function clearBoardArray() {
+  board = []
 }
 
 function fillCardsArray() {
